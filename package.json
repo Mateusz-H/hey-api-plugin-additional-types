@@ -1,0 +1,38 @@
+{
+  "name": "hey-api-plugin-additional-types",
+  "version": "0.0.1",
+  "description": "A custom Hey API plugin that generates TypeScript union types for all tags and operation IDs found in your OpenAPI schema.",
+  "homepage": "https://github.com/Mateusz-H/hey-api-plugin-additional-types#readme",
+  "bugs": {
+    "url": "https://github.com/Mateusz-H/hey-api-plugin-additional-types/issues"
+  },
+  "license": "ISC",
+  "author": "Mateusz Hinca",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mateusz-H/hey-api-plugin-additional-types.git"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "main.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.mts"
+    }
+  },
+  "scripts": {
+    "build": "tsdown"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.41.0",
+    "tsdown": "^0.21.1"
+  },
+  "peerDependencies": {
+    "@hey-api/openapi-ts": "> 0.94.0",
+    "typescript": ">5.9.0"
+  }
+}
